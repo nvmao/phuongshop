@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a href="#" class="navbar-brand">
+            <img th:src="@{/images/cat.png}" height="50" alt="CoolBrand">
+            Mèo Dâuu
+        </a>
+
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link ">Home</a>
+                <a href="#" class="nav-item nav-link">Profile</a>
+                <a href="#" class="nav-item nav-link">Messages</a>
+                <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="cut"></div>
+
+    <div class="container">
+        <!--Row with three equal columns-->
+        <div class="row ">
+        <th:block th:each="img: ${images}">
+
+                <div  class="col-sm-6 col-md-4 col-lg-3 ">
+                    <div class="box ">
+                        <img class="img-fluid fill-img" th:src="@{'/images/' + ${img}}" alt="image">
+                    </div>
+                </div>
+
+        </th:block>
+
+        </div>
+
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+</body>
+
+</html>

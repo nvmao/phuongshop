@@ -1,0 +1,23 @@
+.blue{
+    color: cornflowerblue;
+}
+.bg-light{
+   background-color: #d75dc2!important;
+}
+.cut{
+    margin-bottom: 30px;
+}
+.fill-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.box{
+    padding: 1px;
+    font-size: 18px;
+    min-height: 300px;
+    background: #1e7e34;
+    margin-bottom: 30px;
+
+}
